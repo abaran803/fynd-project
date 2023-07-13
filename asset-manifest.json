@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fynd-project/static/css/main.ffe34ec7.css",
-    "main.js": "/fynd-project/static/js/main.640122fc.js",
+    "main.js": "/fynd-project/static/js/main.64f2fb59.js",
     "static/js/787.cda612ba.chunk.js": "/fynd-project/static/js/787.cda612ba.chunk.js",
     "index.html": "/fynd-project/index.html",
     "main.ffe34ec7.css.map": "/fynd-project/static/css/main.ffe34ec7.css.map",
-    "main.640122fc.js.map": "/fynd-project/static/js/main.640122fc.js.map",
+    "main.64f2fb59.js.map": "/fynd-project/static/js/main.64f2fb59.js.map",
     "787.cda612ba.chunk.js.map": "/fynd-project/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ffe34ec7.css",
-    "static/js/main.640122fc.js"
+    "static/js/main.64f2fb59.js"
   ]
 }
