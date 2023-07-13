@@ -24,12 +24,19 @@ const TicketPanel = () => {
             type, manager, duration, days, subject, description
         })
         .then(() => {
+            setSuccess(true);
             setIsLoading(false);
         })
         .catch(err => {
+            setError(true);
             showError(err)
             setIsLoading(false);
         });
+    }
+
+    const removeAlert = () => {
+      setSuccess(false);
+      setError(false);
     }
 
     if(isLoading) {
@@ -38,6 +45,14 @@ const TicketPanel = () => {
 
   return (
     <form onSubmit={submitHandler}>
+      {error && <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Sorry!</strong> Some error occured.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={removeAlert}></button>
+      </div>}
+      {success && <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Congrats!</strong> Your ticket has been created.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={removeAlert}></button>
+      </div>}
     <div className="container-fluid py-4 px-3">
       <div className="row p-2">
         <div className="mb-3 col-md-6">

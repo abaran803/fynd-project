@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3001/';
+const baseURL = 'https://fynd-project-backend.onrender.com/';
 
 export const generateTicket = async (data) => {
     
@@ -14,6 +14,14 @@ export const generateTicket = async (data) => {
       },
       body: JSON.stringify(data)
     });
+    return response.json();
+  
+}
+
+export const getAllTickets = async (employeeId) => {
+
+    const url = baseURL + 'getAllTicketsOfClient/' + employeeId;
+    const response = await fetch(url);
     return response.json();
   
 }

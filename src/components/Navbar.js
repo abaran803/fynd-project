@@ -1,4 +1,15 @@
-const Navbar = () => {
+const Navbar = (props) => {
+
+  const showGenerateTicketPage = () => {
+    props.setGenerateTicket(true);
+    props.setShowTicket(false);
+  }
+
+  const showViewTicketPage = () => {
+    props.setGenerateTicket(false);
+    props.setShowTicket(true);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
@@ -24,51 +35,14 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              <div className="nav-link" style={{cursor: 'pointer', color: 'white'}} onClick={showViewTicketPage}>
+                Show
+              </div>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
+              <div className="nav-link" style={{cursor: 'pointer', color: 'white'}} onClick={showGenerateTicketPage}>
+                Generate
+              </div>
             </li>
           </ul>
           <form className="d-flex">
