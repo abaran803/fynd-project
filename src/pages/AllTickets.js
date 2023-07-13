@@ -44,7 +44,7 @@ const AllTickets = () => {
         {
             tickets.map(ticket => (
                 <tr>
-                    <td>{ticket.description}</td>
+                    <td>{ticket.description.substring(0, 20) + (ticket.description.length > 20 ? '...' : '')}</td>
                     <td>{ticket.duration}</td>
                     <td>{ticket.type}</td>
                     <td>{ticket.subject}</td>
